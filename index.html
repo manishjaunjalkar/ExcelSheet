@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ExcellSheet</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+</head>
+<body>
+    <div class="heading-tabs">
+        <label for="File">
+            <a href="#">File</a>
+        </label>
+        <label for="Home">
+            <a href="#">Home</a>
+        </label>
+        <label for="Insert">
+            <a href="#">Insert</a>
+        </label>
+        <label for="Layout">
+            <a href="#">Layout</a>
+        </label>
+        <label for="Help">
+            <a href="#">Help</a>
+        </label>
+    </div>
+  
+<div class="container">
+   
+    <button id="bold-btn" ><i class="material-icons">format_bold</i></button>
+    <button id="italic"><i class="material-icons">format_italic</i></button>
+    <button id="underline"><i class="material-icons">format_underline</i></button>
+
+    
+    <label for="text-color" ><i class="material-icons">format_color_text</i></label>
+    <input type="color" id="text-color" >
+
+    <label for="bg-color"><i class="material-icons">format_color_fill</i></label>
+    <input type="color" id="bg-color">
+    
+    <!-- <br> -->
+
+    <button id="align-left" class="material-icons" >format_align_left</button>
+    <button id="align-center" class="material-icons">format_align_center</button>
+    <button id="align-right" class="material-icons">format_align_right</button>
+   
+    <!-- <br> -->
+
+    <select name="font-size" id="font-size">
+        <option value="14px">14</option>
+        <option value="16px">16</option>
+        <option value="18px">18</option>
+        <option value="20px">20</option>
+    </select>
+
+    <select name="font-style" id="font-style">
+        <option value="serif">Serif</option>
+        <option value="sans-serif">Sans-serif</option>
+        <option value="monospace">Monospace</option>
+        <option value="cursive">Cursive</option>
+        <option value="fantasy">Fantasy</option>
+    </select>
+
+    <!-- <br> -->
+
+    <button id="text-cut"><i class="material-icons">content_cut</i>
+    </button>
+    <button id="text-copy"><i class="material-icons">content_copy</i>
+    </button>
+    <button id="text-paste"><i class="material-icons">content_paste</i>
+    </button>
+
+    <button onclick="downloadJson()">Download</button>
+    <input type="file" id="jsonFile" accept=".json">
+</div>
+<div class="cell-div">
+    <span id="current-cell" >Cell</span>
+</div>
+<div>
+    <h1 id="sheet-num"></h1>
+</div>
+
+    <table id="table">
+        <thead id="thead">
+            <tr id="thead-column">
+                <th></th>
+            </tr>
+      
+        </thead>
+        <tbody id="tbody">
+           
+        </tbody>
+    </table>
+
+    <div id="sheets">
+    <div> <button id="add-btn" class="material-icons" >add</button></div>
+        <button id="sheet1">sheet1</button>
+        <button id="sheet2">sheet2</button>
+        <button id="sheet3">sheet3</button>
+ 
+    </div>
+<script src="script.js"></script>
+</body>
+</html>
